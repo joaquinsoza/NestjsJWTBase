@@ -7,8 +7,10 @@ module.exports = {
   },
   plugins: ['@typescript-eslint/eslint-plugin'],
   extends: [
+    "eslint:recommended",
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
+    "prettier",
   ],
   root: true,
   env: {
@@ -21,5 +23,11 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-non-null-assertion": "warn",
+    "@typescript-eslint/no-empty-function": "warn",
+    "no-extra-boolean-cast": "off",
+    "prefer-const": "warn"
   },
 };

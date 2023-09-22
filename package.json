@@ -1,5 +1,5 @@
 {
-  "name": "JWTBase",
+  "name": "jwt-base",
   "version": "0.1.0",
   "description": "Nestjs backend",
   "author": "Joaquín Soza",
@@ -79,6 +79,6 @@
     "testEnvironment": "node"
   },
   "engines": {
-    "node": "18.14.2"
+    "node": "18.16.0"
   }
 }
