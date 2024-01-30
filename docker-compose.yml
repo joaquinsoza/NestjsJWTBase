@@ -1,6 +1,6 @@
 services:
   backend:
-    image: ./
+    image: node:latest
     working_dir: /app
     ports:
       - "3000:3000"
