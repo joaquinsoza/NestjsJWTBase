@@ -1,0 +1,35 @@
+services:
+  backend:
+    image: ./
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    depends_on:
+      - pgdb
+    tty: true
+
+  pgdb:
+    image: postgres:14
+    restart: always
+    container_name: pgdb
+    volumes:
+      - db-volume:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+    env_file:
+      - .env
+  
+networks: 
+  app-network:
+    driver: bridge
+
+volumes: 
+  db-volume:
